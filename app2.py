@@ -8,9 +8,21 @@ Created on Wed Jan 29 12:03:00 2025
 
 import streamlit as st 
 import pandas as pd
+import requests
+from io import BytesIO
+from PIL import Image
 # Title of the app st.title("Researcher Profile Page") 
 # Collect basic information 
-#st.image("IMG_6757.HEIC", caption="Sunrise by the mountains")
+
+image_url = 'https://drive.google.com/file/d/11iZ_TQfJlxBxpiOqJFaIBDm3aIWudrYR/view?usp=drive_link'
+response = requests.get(image_url)
+
+if response.status_code == 200:
+    img = Image.open(BytesIO(response.content))
+    
+    st.image(img, caption="Y")
+else:
+    st.error("failed to load the image")
 name = "Dr. Yolanda Novokoza"
 field = "Bioinformatics" 
 institution = "University of South Africa" 
