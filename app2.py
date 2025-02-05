@@ -12,7 +12,7 @@ import pandas as pd
 # Title of the app st.title("Researcher Profile Page") 
 # Collect basic information 
 
-st.image('IMG_0614.jpeg')##caption="Y")
+st.image('IMG_0614.jpeg', width='1600')##caption="Y")
 
 name = "Dr. Yolanda Novokoza"
 field = "Bioinformatics" 
