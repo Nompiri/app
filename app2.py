@@ -10,6 +10,7 @@ import streamlit as st
 import pandas as pd
 # Title of the app st.title("Researcher Profile Page") 
 # Collect basic information 
+st.image("IMG_6757.HEIC", caption="Sunrise by the mountains")
 name = "Dr. Yolanda Novokoza"
 field = "Bioinformatics" 
 institution = "University of South Africa" 
