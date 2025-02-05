@@ -24,7 +24,7 @@ tab1, tab2, tab3 = st.tabs(["Biography", "Research Output", "Contact Details"])
 
 with tab1:
     st.header("Biography")
-     st.write("Dr. Yolanda Novokoza is a renowned Bioinformatician with a researech experience spanning 15 years.\nHer key insterests include Drug Discovery, Genomics and Enzymology.\n\nPS: This is a manifestation. Don't report me to officials!")
+    st.write("Dr. Yolanda Novokoza is a renowned Bioinformatician with a researech experience spanning 15 years.\nHer key insterests include Drug Discovery, Genomics and Enzymology.\n\nPS: This is a manifestation. Don't report me to officials!")
 with tab2:
     st.header("Research Output")
     uploaded_file = st.file_uploader("Choose a csv file",type="csv")
