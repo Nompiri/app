@@ -24,20 +24,11 @@ col1, col2, col3 = st.columns(3)
 
 with col1:
     st.header("Biography")
-    st.image("https://static.streamlit.io/examples/cat.jpg")
+    st.write("Dr. Yolanda Novokoza is a renowned Bioinformatician with a researech experience spanning 15 years.\nHer key insterests include Drug Discovery, Genomics and Enzymology.\n\nPS: This is a manifestation. Don't report me to officials!")
 
 with col2:
     st.header("Research Output")
-    st.image("https://static.streamlit.io/examples/dog.jpg")
-
-with col3:
-    st.header("Contact Details")
-    st.image("https://static.streamlit.io/examples/owl.jpg")
-
-
-# Add a section for publications 
-st.header("Publications") 
-uploaded_file = st.file_uploader("Upload a CSV of Publications", type="csv") 
+    uploaded_file = st.file_uploader("Upload a CSV of Publications", type="csv") 
 if uploaded_file: 
     publications = pd.read_csv(uploaded_file) 
     st.dataframe(publications) 
@@ -60,8 +51,11 @@ if uploaded_file:
         
     else: 
         st.write("The CSV does not have a 'Year' column to visualize trends.") 
-    
+
+with col3:
+    st.header("Contact Details")
+    email = "novoky@unisa.ac.za" 
+    st.write(f"You can reach {name} at {email}.")    
 # Add a contact section 
 st.header("Contact Information") 
-email = "novoky@unisa.ac.za" 
-st.write(f"You can reach {name} at {email}.")
+
