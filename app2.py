@@ -14,7 +14,7 @@ from PIL import Image
 # Title of the app st.title("Researcher Profile Page") 
 # Collect basic information 
 
-image_url = 'https://drive.google.com/file/d/11iZ_TQfJlxBxpiOqJFaIBDm3aIWudrYR/view?usp=sharing'
+image_url = 'https://drive.google.com/uc?id=11iZ_TQfJlxBxpiOqJFaIBDm3aIWudrYR'
 response = requests.get(image_url)
 if response.status_code == 200:
     img = Image.open(BytesIO(response.content))
