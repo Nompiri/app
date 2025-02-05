@@ -20,13 +20,12 @@ st.write(f"**Name:** {name}")
 st.write(f"**Field of Research:** {field}") 
 st.write(f"**Institution:** {institution}") 
 
-col1, col2, col3 = st.columns(3)
+tab1, tab2, tab3 = st.tabs(["Biography", "Research Output", "Contact Details"])
 
-with col1:
+with tab1:
     st.header("Biography")
-    st.write("Dr. Yolanda Novokoza is a renowned Bioinformatician with a researech experience spanning 15 years.\nHer key insterests include Drug Discovery, Genomics and Enzymology.\n\nPS: This is a manifestation. Don't report me to officials!")
-
-with col2:
+     st.write("Dr. Yolanda Novokoza is a renowned Bioinformatician with a researech experience spanning 15 years.\nHer key insterests include Drug Discovery, Genomics and Enzymology.\n\nPS: This is a manifestation. Don't report me to officials!")
+with tab2:
     st.header("Research Output")
     uploaded_file = st.file_uploader("Choose a csv file",type="csv")
     if uploaded_file: 
@@ -42,18 +41,18 @@ with col2:
             st.dataframe(filtered) 
         else: 
             st.write("Showing all publications") 
-    # Add a section for visualizing publication trends 
-    st.header("Publication Trends") 
-    if uploaded_file: 
-        if "Year" in publications.columns: 
-            year_counts = publications["Year"].value_counts().sort_index() 
-            st.bar_chart(year_counts) 
             
-        else: 
-            st.write("The CSV does not have a 'Year' column to visualize trends.") 
-
-with col3:
+        # Add a section for visualizing publication trends 
+        st.header("Publication Trends") 
+        if uploaded_file: 
+            if "Year" in publications.columns: 
+                year_counts = publications["Year"].value_counts().sort_index() 
+                st.bar_chart(year_counts) 
+                
+            else: 
+                st.write("The CSV does not have a 'Year' column to visualize trends.") 
+with tab3:
     st.header("Contact Details")
     email = "novoky@unisa.ac.za" 
-    st.write(f"You can reach {name} at {email}.")    
+    st.write(f"You can reach {name} at {email}.")  
 
