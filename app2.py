@@ -28,7 +28,7 @@ with col1:
 
 with col2:
     st.header("Research Output")
-    uploaded_file = st.file_uploader("Upload a CSV of Publications", type="csv") 
+    uploaded_file = "https://publications.scilifelab.se/publications/csv" 
     if uploaded_file: 
         publications = pd.read_csv(uploaded_file) 
         st.dataframe(publications) 
