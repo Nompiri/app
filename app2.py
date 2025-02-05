@@ -17,12 +17,12 @@ from PIL import Image
 image_url = 'https://drive.google.com/file/d/11iZ_TQfJlxBxpiOqJFaIBDm3aIWudrYR/view?usp=drive_link'
 response = requests.get(image_url)
 
-if response.status_code == 200:
-    img = Image.open(BytesIO(response.content))
+#if response.status_code == 200:
+ #   img = Image.open(BytesIO(response.content))
     
-    st.image(img, caption="Y")
-else:
-    st.error("failed to load the image")
+st.image(img, caption="Y")
+#else:
+ #   st.error("failed to load the image")
 name = "Dr. Yolanda Novokoza"
 field = "Bioinformatics" 
 institution = "University of South Africa" 
