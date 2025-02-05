@@ -19,6 +19,22 @@ st.header("Researcher Overview")
 st.write(f"**Name:** {name}") 
 st.write(f"**Field of Research:** {field}") 
 st.write(f"**Institution:** {institution}") 
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.header("Biography")
+    st.image("https://static.streamlit.io/examples/cat.jpg")
+
+with col2:
+    st.header("Research Output")
+    st.image("https://static.streamlit.io/examples/dog.jpg")
+
+with col3:
+    st.header("Contact Details")
+    st.image("https://static.streamlit.io/examples/owl.jpg")
+
+
 # Add a section for publications 
 st.header("Publications") 
 uploaded_file = st.file_uploader("Upload a CSV of Publications", type="csv") 
